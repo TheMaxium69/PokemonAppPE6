@@ -1,0 +1,22 @@
+<h1>Article de Pokémon</h1>
+
+<input class="container"
+    #input
+    (keyup)="resultForm(input.value)"
+    type="string"
+>
+
+<hr>
+
+<div class="container card-group">
+    <div *ngFor="let article of Articles">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ article }}</h5>
+                <p (click)="afficheArticle(article)" class="card-text">Clickez ici !</p>
+
+            </div>
+        </div>
+    </div>
+</div>
